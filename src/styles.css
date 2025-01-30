@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.line-spacer {
+  display: block;
+  height: 3px;
+  width: 100px;
+  background: linear-gradient(to right, #ffef09, #0affd6);
+  margin: 5px 0;
+}
+
+.swiper-pagination1 .swiper-pagination-bullet {
+  background-color: #000000;
+}
+
+.swiper-pagination1 .swiper-pagination-bullet-active {
+  background-color: #00ff00 !important;
+}

@@ -1,0 +1,108 @@
+/* Estilos base para el header */
+.header {
+  background-color: #0a062d;
+  padding: 10px 20px;
+}
+
+.header-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  max-height: 70px;
+  padding: 5px 0;
+}
+.logo a{
+  cursor: pointer;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Botones especiales */
+.create-account {
+  background-color: #006fff;
+  color: #ffffff;
+}
+
+.login {
+  background-color: #00fc61;
+  color: #0a062d;
+}
+
+/* Hover para links */
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: Menú tipo hamburguesa para pantallas pequeñas */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: white;
+  height: 3px;
+  margin: 5px 0;
+  width: 25px;
+}
+
+/* Ocultar menú en pantallas pequeñas por defecto */
+.menu {
+  flex-direction: row;
+}
+
+.menu.responsive {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .header-container {
+    width: 100%;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a062d;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+}

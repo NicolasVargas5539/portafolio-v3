@@ -1,0 +1,25 @@
+<div class="p-relative">
+  <div class="swiper mySwiper1">
+    <div class="swiper-wrapper align-items-center">
+      @for (skill of skils; track $index) {
+        <div class="swiper-slide animate__animated animate__fadeIn">
+          <div class="swiper-content">
+            <div class="swiper-text px-5 py-2">
+              <div class="swiper-contenido">
+                <div class="agends_table">
+                  <img [src]="'./assets/img/home/Mesa-de-trabajo-'+skill.img"
+                       class="agents-icon"
+                       [alt]="'Icon ' + skill.img">
+                  <p>{{ skill.label }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination swiper-pagination1"></div>
+  </div>
+</div>

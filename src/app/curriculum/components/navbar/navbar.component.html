@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo" >
+      <a routerLink="/home" routerLinkActive="active">
+        <img src="./assets/img/boomerang-logo-dark.png" alt="Boomerang Logo">
+      </a>
+    </div>
+    <!-- Menú Hamburguesa -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Menú -->
+    <nav class="menu" [ngClass]="{ active: isMenuOpen }">
+      <!-- <a routerLink="/demo" routerLinkActive="active">Demo</a> -->
+      <!-- <a routerLink="/soluciones" routerLinkActive="active">Soluciones</a> -->
+      <a routerLink="/contact" routerLinkActive="active">{{'Contacto' }}</a>
+      <a routerLink="/login" routerLinkActive="active" class="login">{{'Login'}}</a>
+      <!-- <app-lenguage-switcher></app-lenguage-switcher> -->
+    </nav>
+  </div>
+</header>
